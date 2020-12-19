@@ -6,11 +6,12 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <Nav />
-      <div className="bg-white">
+
+      <div className="bg-white dark:bg-black dark:text-white">
+        <Nav />
         <main>{children}</main>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

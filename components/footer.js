@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="opacity-60">© {new Date().getFullYear()} Abhi</div>
         <div className="grid grid-flow-col auto-cols-max gap-8">
           <Link href="/about">
-            <a>about</a>
+            <a>About</a>
           </Link>
-          <div>hello@meet-abhi.com</div>
+          <div className="hidden sm:block">hello@meet-abhi.com</div>
         </div>
       </div>
     </footer>

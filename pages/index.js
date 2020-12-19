@@ -54,7 +54,7 @@ export default function Index({}) {
         <Head>
           <title>Meet abhi</title>
         </Head>
-        <section className="px-3 py-12">
+        <section className="px-6 py-12">
           <div className="wrapper">
             <p>Hi. Nice to meet you!</p>
             <br />
@@ -65,12 +65,12 @@ export default function Index({}) {
               and intersection of design and engineering.
             </p>
             <br />
-            <div className="grid grid-flow-col auto-cols-max gap-4">
+            <div className="grid grid-cols-2 sm:grid-flow-col sm:auto-cols-max gap-4">
               <a
                 href="https://www.twitter.com/_abhiii"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="inline-flex px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
                 tabIndex={0}
               >
                 Twitter
@@ -80,7 +80,7 @@ export default function Index({}) {
                 rel="noopener noreferrer"
                 target="_blank"
                 tabIndex={0}
-                className="inline-flex px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Dribbble
               </a>
@@ -88,13 +88,13 @@ export default function Index({}) {
                 href="../public/assets/common/resume.pdf"
                 download
                 tabIndex={0}
-                className="inline-flex px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Resume
               </a>
               <div
                 tabIndex={0}
-                className="inline-flex px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Email
               </div>
@@ -102,7 +102,7 @@ export default function Index({}) {
           </div>
         </section>
 
-        <section className="px-3 py-12">
+        <section className="px-6 py-12">
           <div className="wrapper grid grid-flow-row auto-row-max gap-24">
             {projects.map((project) => {
               return (
@@ -128,7 +128,7 @@ export default function Index({}) {
 
         <div className="wrapper h-px bg-black bg-opacity-10"></div>
 
-        <section className="px-3 py-12">
+        <section className="px-6 py-12">
           <div className="wrapper">
             <p className="mb-6">
               At some point during my design life I decided to start building
@@ -150,18 +150,28 @@ export default function Index({}) {
               Spotify, Apple Music, Youtube, SoundCloud and Amazon Music. It
               helps to control music no matter where you are with one click.
             </p>
+            <br />
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              tabIndex={0}
+              className="inline-flex px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+              href="https://chrome.google.com/webstore/detail/ishuffle/cdnnpipncmghbcfkadecjchajedkegbc?hl=en"
+            >
+              Download iShuffle
+            </a>
           </div>
         </section>
 
         <div className="wrapper h-px bg-black bg-opacity-10"></div>
 
-        <section className="px-3 py-12">
+        <section className="px-6 py-12">
           <div className="wrapper">
             <p>
               Join my email list and get free design stuff and occasional
               note-worthy things from me.
             </p>
-            <form className="grid grid-cols-5 mt-6 gap-3">
+            <form className="grid grid-flow-row auto-rows-fr gap-6 sm:grid-cols-5 mt-6 sm:gap-3">
               <input
                 className="p-2 col-span-2 border border-solid border-gray-300 focus:border-accent focus:no-outline focus:ring focus:ring-accent rounded-md"
                 type="text"
@@ -174,7 +184,7 @@ export default function Index({}) {
                 aria-label="Your Email"
                 placeholder="Your Email"
               />
-              <button className="col-span-1 bg-accent rounded-md font-medium focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50">
+              <button className="col-span-2 sm:col-span-1 bg-accent rounded-md font-medium focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50">
                 Join
               </button>
             </form>

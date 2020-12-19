@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: "media",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
     fontFamily: {
@@ -6,7 +7,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        accent: "#ffca1e",
+        accent: "#FEA82F", //"#31E981",
       },
       spacing: {
         28: "7rem",
