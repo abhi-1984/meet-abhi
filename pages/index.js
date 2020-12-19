@@ -162,11 +162,13 @@ export default function Index({}) {
               <input
                 className="p-2 col-span-2 border border-solid border-gray-300 focus:border-accent focus:no-outline focus:ring focus:ring-accent rounded-md"
                 type="text"
+                aria-label="Full name"
                 placeholder="Full Name"
               />
               <input
                 className="p-2 col-span-2 border border-solid border-gray-300 focus:border-accent focus:no-outline focus:ring focus:ring-accent rounded-md"
                 type="email"
+                aria-label="Your Email"
                 placeholder="Your Email"
               />
               <button className="col-span-1 bg-accent rounded-md font-medium focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50">
