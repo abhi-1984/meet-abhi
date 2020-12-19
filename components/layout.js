@@ -1,12 +1,16 @@
 import Meta from "../components/meta";
+import Footer from "./footer";
+import Nav from "./nav";
 
 export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <Nav />
+      <div className="bg-white">
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   );
 }

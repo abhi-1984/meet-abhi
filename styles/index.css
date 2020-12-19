@@ -8,6 +8,14 @@
 
 /* Write you own custom component styles here */
 
+.wrapper {
+  @apply max-w-screen-sm mx-auto;
+}
+
+p {
+  @apply text-xl leading-relaxed;
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
