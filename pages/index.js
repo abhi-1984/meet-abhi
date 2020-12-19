@@ -6,6 +6,7 @@ import Project3Teaser from "../public/assets/homepage/project-3.mp4";
 import Project4Teaser from "../public/assets/homepage/project-4.mp4";
 import Project5Teaser from "../public/assets/homepage/project-5.mp4";
 import Project6Teaser from "../public/assets/homepage/iShuffle.mp4";
+import LazyLoad from "react-lazyload";
 import Head from "next/head";
 
 export default function Index({}) {
@@ -106,15 +107,17 @@ export default function Index({}) {
             {projects.map((project) => {
               return (
                 <div key={project.id} className="">
-                  <video
-                    autoPlay
-                    loop
-                    playsInline
-                    controls={false}
-                    muted
-                    className="rounded-md"
-                    src={project.teaser}
-                  />
+                  <LazyLoad height={"100%"} once>
+                    <video
+                      autoPlay
+                      loop
+                      playsInline
+                      controls={false}
+                      muted
+                      className="rounded-md"
+                      src={project.teaser}
+                    />
+                  </LazyLoad>
                   <p className="mt-6 mb-1 font-bold">{project.title}</p>
                   <p>{project.description}</p>
                 </div>
