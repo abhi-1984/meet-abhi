@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         accent: "#FEA82F", //"#31E981",
       },
+      textOpacity: ["dark"],
       spacing: {
         28: "7rem",
       },
