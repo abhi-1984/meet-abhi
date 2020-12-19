@@ -70,7 +70,7 @@ export default function Index({}) {
                 href="https://www.twitter.com/_abhiii"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
                 tabIndex={0}
               >
                 Twitter
@@ -80,7 +80,7 @@ export default function Index({}) {
                 rel="noopener noreferrer"
                 target="_blank"
                 tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Dribbble
               </a>
@@ -88,13 +88,13 @@ export default function Index({}) {
                 href="../public/assets/common/resume.pdf"
                 download
                 tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Resume
               </a>
               <div
                 tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Email
               </div>
@@ -119,7 +119,7 @@ export default function Index({}) {
                     />
                   </LazyLoad>
                   <p className="mt-6 mb-1 font-bold">{project.title}</p>
-                  <p>{project.description}</p>
+                  <p className="dark:opacity-70">{project.description}</p>
                 </div>
               );
             })}
@@ -155,7 +155,7 @@ export default function Index({}) {
               rel="noopener noreferrer"
               target="_blank"
               tabIndex={0}
-              className="inline-flex px-6 py-3 bg-gray-100 rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+              className="inline-flex px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               href="https://chrome.google.com/webstore/detail/ishuffle/cdnnpipncmghbcfkadecjchajedkegbc?hl=en"
             >
               Download iShuffle
