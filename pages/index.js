@@ -14,7 +14,7 @@ export default function Index({}) {
   const [projects] = useState([
     {
       id: 1,
-      teaser: Project2Teaser,
+      teaser: Project1Teaser,
       title: "Samespace Analytics",
       description:
         "I helped to design powerful business intelligence tool that makes data visualization and exploration easy with flexible filtering, scheduling, and customization.",
@@ -28,21 +28,21 @@ export default function Index({}) {
     },
     {
       id: 3,
-      teaser: Project2Teaser,
+      teaser: Project3Teaser,
       title: "Samespace Dock",
       description:
         "I helped to re-imagine Samespace Dock with features like AI Assistance, Social Media Support and Native Integration with Salesforce.",
     },
     {
       id: 4,
-      teaser: Project2Teaser,
+      teaser: Project4Teaser,
       title: "tlkn",
       description:
         "Based on principle of Privacy by Design I made an visual design which inspires people to talk again instead of sending emojis. Entire calling experience was re-imagined and re-engineered. And the outcome? Pure Simplicity.",
     },
     {
       id: 1,
-      teaser: Project2Teaser,
+      teaser: Project5Teaser,
       title: "Samespace Messenger",
       description:
         "I helped redesign the Messenger, which is used by thousands of users every month. The Samespace messenger allows to chat or talk with website visitors in real-time and capture leads.",
@@ -119,7 +119,7 @@ export default function Index({}) {
             {projects.map((project) => {
               return (
                 <div key={project.id} className="">
-                  <div className="aspect-w-4 aspect-h-3 rounded-md overflow-hidden">
+                  <div className="aspect-w-4 aspect-h-3 rounded-md overflow-hidden border border-solid border-opacity-10">
                     <LazyLoad height={"100%"} once>
                       <video
                         autoPlay

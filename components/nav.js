@@ -30,7 +30,7 @@ export default function Nav() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.96 }}
-            className="text-sm  font-medium px-4 py-2 bg-accent rounded-md  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent"
+            className="text-sm  font-medium px-4 py-2 bg-accent dark:text-black rounded-md  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent"
           >
             Say Hi
           </motion.button>
