@@ -119,8 +119,8 @@ export default function Index({}) {
             {projects.map((project) => {
               return (
                 <div key={project.id} className="">
-                  <LazyLoad height={"100%"} once>
-                    <div className="aspect-w-4 aspect-h-3 rounded-md overflow-hidden">
+                  <div className="aspect-w-4 aspect-h-3 rounded-md overflow-hidden">
+                    <LazyLoad height={"100%"} once>
                       <video
                         autoPlay
                         loop
@@ -130,8 +130,9 @@ export default function Index({}) {
                         className=""
                         src={project.teaser}
                       />
-                    </div>
-                  </LazyLoad>
+                    </LazyLoad>
+                  </div>
+
                   <p className="mt-6 mb-1 font-bold">{project.title}</p>
                   <p className="dark:text-opacity-60 dark:text-white">
                     {project.description}
