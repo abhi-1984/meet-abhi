@@ -1,6 +1,11 @@
 module.exports = {
   darkMode: "media",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
+  variants: {
+    extend: {
+      textOpacity: ["dark"],
+    },
+  },
   theme: {
     fontFamily: {
       sans: "aktiv-grotesk, sans-serif",
@@ -9,7 +14,7 @@ module.exports = {
       colors: {
         accent: "#FEA82F", //"#31E981",
       },
-      textOpacity: ["dark"],
+
       spacing: {
         28: "7rem",
       },

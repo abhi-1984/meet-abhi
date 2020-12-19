@@ -65,7 +65,7 @@ export default function Index({}) {
               and intersection of design and engineering.
             </p>
             <br />
-            <div className="grid grid-cols-2 sm:grid-flow-col sm:auto-cols-max gap-4">
+            <div className="grid grid-cols-2 sm:grid-flow-col sm:auto-cols-fr gap-4">
               <a
                 href="https://www.twitter.com/_abhiii"
                 rel="noopener noreferrer"
@@ -119,7 +119,9 @@ export default function Index({}) {
                     />
                   </LazyLoad>
                   <p className="mt-6 mb-1 font-bold">{project.title}</p>
-                  <p className="dark:text-opacity-60">{project.description}</p>
+                  <p className="dark:text-opacity-60 dark:text-white">
+                    {project.description}
+                  </p>
                 </div>
               );
             })}
