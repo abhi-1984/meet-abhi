@@ -119,7 +119,7 @@ export default function Index({}) {
                     />
                   </LazyLoad>
                   <p className="mt-6 mb-1 font-bold">{project.title}</p>
-                  <p className="dark:opacity-70">{project.description}</p>
+                  <p className="dark:text-opacity-60">{project.description}</p>
                 </div>
               );
             })}
