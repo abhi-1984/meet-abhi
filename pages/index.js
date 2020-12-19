@@ -14,7 +14,7 @@ export default function Index({}) {
   const [projects] = useState([
     {
       id: 1,
-      teaser: Project1Teaser,
+      teaser: Project2Teaser,
       title: "Samespace Analytics",
       description:
         "I helped to design powerful business intelligence tool that makes data visualization and exploration easy with flexible filtering, scheduling, and customization.",
@@ -28,21 +28,21 @@ export default function Index({}) {
     },
     {
       id: 3,
-      teaser: Project3Teaser,
+      teaser: Project2Teaser,
       title: "Samespace Dock",
       description:
         "I helped to re-imagine Samespace Dock with features like AI Assistance, Social Media Support and Native Integration with Salesforce.",
     },
     {
       id: 4,
-      teaser: Project4Teaser,
+      teaser: Project2Teaser,
       title: "tlkn",
       description:
         "Based on principle of Privacy by Design I made an visual design which inspires people to talk again instead of sending emojis. Entire calling experience was re-imagined and re-engineered. And the outcome? Pure Simplicity.",
     },
     {
       id: 1,
-      teaser: Project5Teaser,
+      teaser: Project2Teaser,
       title: "Samespace Messenger",
       description:
         "I helped redesign the Messenger, which is used by thousands of users every month. The Samespace messenger allows to chat or talk with website visitors in real-time and capture leads.",
@@ -120,15 +120,17 @@ export default function Index({}) {
               return (
                 <div key={project.id} className="">
                   <LazyLoad height={"100%"} once>
-                    <video
-                      autoPlay
-                      loop
-                      playsInline
-                      controls={false}
-                      muted
-                      className="rounded-md"
-                      src={project.teaser}
-                    />
+                    <div className="aspect-w-4 aspect-h-3 rounded-md overflow-hidden">
+                      <video
+                        autoPlay
+                        loop
+                        playsInline
+                        controls={false}
+                        muted
+                        className=""
+                        src={project.teaser}
+                      />
+                    </div>
                   </LazyLoad>
                   <p className="mt-6 mb-1 font-bold">{project.title}</p>
                   <p className="dark:text-opacity-60 dark:text-white">
