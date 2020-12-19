@@ -8,6 +8,7 @@ import Project5Teaser from "../public/assets/homepage/project-5.mp4";
 import Project6Teaser from "../public/assets/homepage/iShuffle.mp4";
 import LazyLoad from "react-lazyload";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Index({}) {
   const [projects] = useState([
@@ -66,38 +67,49 @@ export default function Index({}) {
             </p>
             <br />
             <div className="grid grid-cols-2 sm:grid-flow-col sm:auto-cols-fr gap-4">
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
+                whileTap={{ scale: 0.96 }}
                 href="https://www.twitter.com/_abhiii"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
                 tabIndex={0}
               >
                 Twitter
-              </a>
-              <a
-                href="https://www.twitter.com/_abhiii"
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
+                whileTap={{ scale: 0.96 }}
+                href="https://www.dribbble.com/_abhiii"
                 rel="noopener noreferrer"
                 target="_blank"
                 tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Dribbble
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
+                whileTap={{ scale: 0.96 }}
+                href="https://www.behance.com/_abhiii"
+                rel="noopener noreferrer"
+                target="_blank"
+                tabIndex={0}
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+              >
+                Behance
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
+                whileTap={{ scale: 0.96 }}
                 href="../public/assets/common/resume.pdf"
                 download
                 tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               >
                 Resume
-              </a>
-              <div
-                tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-              >
-                Email
-              </div>
+              </motion.a>
             </div>
           </div>
         </section>
@@ -153,15 +165,17 @@ export default function Index({}) {
               helps to control music no matter where you are with one click.
             </p>
             <br />
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
+              whileTap={{ scale: 0.96 }}
               rel="noopener noreferrer"
               target="_blank"
               tabIndex={0}
-              className="inline-flex px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer hover:bg-accent transition-all focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+              className="inline-flex px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
               href="https://chrome.google.com/webstore/detail/ishuffle/cdnnpipncmghbcfkadecjchajedkegbc?hl=en"
             >
               Download iShuffle
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -186,9 +200,13 @@ export default function Index({}) {
                 aria-label="Your Email"
                 placeholder="Your Email"
               />
-              <button className="col-span-2 sm:col-span-1 bg-accent rounded-md font-medium focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.96 }}
+                className="col-span-2 sm:col-span-1 bg-accent rounded-md font-medium focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
+              >
                 Join
-              </button>
+              </motion.button>
             </form>
           </div>
         </section>
