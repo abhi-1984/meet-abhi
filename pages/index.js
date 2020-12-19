@@ -126,7 +126,7 @@ export default function Index({}) {
           </div>
         </section>
 
-        <div className="wrapper h-px bg-black bg-opacity-10"></div>
+        <div className="wrapper h-px  dark:bg-white bg-black bg-opacity-10"></div>
 
         <section className="px-6 py-12">
           <div className="wrapper">
@@ -163,7 +163,7 @@ export default function Index({}) {
           </div>
         </section>
 
-        <div className="wrapper h-px bg-black bg-opacity-10"></div>
+        <div className="wrapper h-px bg-black dark:bg-white bg-opacity-10"></div>
 
         <section className="px-6 py-12">
           <div className="wrapper">
