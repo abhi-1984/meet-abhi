@@ -4,36 +4,25 @@ import { motion } from "framer-motion";
 
 export default function Nav() {
   return (
-    <nav className="px-6 py-6 sm:py-12">
+    <nav className="px-10 py-3 fixed top-0 left-0 right-0 bg-black bg-opacity-90 backdrop-blur z-40">
       <div className="wrapper flex items-center justify-between relative">
         <Link href="/">
-          <a className="focus:outline-none">
-            <Image
-              src={"/assets/common/logo.png"}
-              alt="Meet Abhi"
-              width={80}
-              height={80}
-            />
-          </a>
+          <a className="focus:outline-none text-xl">ab.</a>
         </Link>
-        <div className="hidden sm:grid grid-flow-col auto-cols-max gap-12 items-center relative z-10">
-          <Link href="/about">
+        <div className="hidden sm:grid grid-flow-col auto-cols-max gap-10 items-center relative z-10">
+          <Link href="/">
             <a className="relative z-10 focus:outline-none hover:text-accent focus:ring focus:ring-opacity-50 focus:ring-accent">
+              Work
+            </a>
+          </Link>
+          <Link href="/about">
+            <a className="focus:outline-none focus:ring hover:text-accent focus:ring-opacity-50 focus:ring-accent">
               About
             </a>
           </Link>
-          <Link href="/ux-matters">
-            <a className="focus:outline-none focus:ring hover:text-accent focus:ring-opacity-50 focus:ring-accent">
-              UX Case Studies
-            </a>
-          </Link>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.96 }}
-            className="text-sm  font-medium px-4 py-2 bg-accent dark:text-black rounded-md  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent"
-          >
-            Say Hi
-          </motion.button>
+          <button className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent">
+            Get in Touch
+          </button>
         </div>
       </div>
     </nav>

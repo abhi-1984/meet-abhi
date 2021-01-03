@@ -7,9 +7,9 @@ export default function Layout({ preview, children }) {
     <>
       <Meta />
 
-      <div className="bg-white dark:bg-black dark:text-white">
+      <div className="bg-black text-white min-h-screen">
         <Nav />
-        <main>{children}</main>
+        <main className="pt-16">{children}</main>
         <Footer />
       </div>
     </>

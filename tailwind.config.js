@@ -1,22 +1,39 @@
 module.exports = {
-  darkMode: "class",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   variants: {
-    extend: {
-      textOpacity: ["dark"],
-    },
+    extend: {},
   },
   theme: {
     fontFamily: {
-      sans: "aktiv-grotesk, sans-serif",
+      sans: "sofia-pro, sans-serif",
     },
     extend: {
       colors: {
-        accent: "#FEA82F", //"#31E981",
+        black: "#060606",
+        jetBlack: "#121213",
+        accent: "#fff", //"#31E981",
       },
-
+      animation: {
+        spin: "pulse 3s linear infinite",
+        "spin-slow": "spin 9s linear infinite",
+      },
+      backdropFilter: {
+        none: "none",
+        blur: "blur(10px)",
+      },
+      screens: {
+        xs: "400px",
+        md: "800px",
+      },
       spacing: {
         28: "7rem",
+      },
+      width: {
+        300: "300px",
+      },
+      height: {
+        300: "300px",
+        500: "500px",
       },
       letterSpacing: {
         tighter: "-.04em",
@@ -26,16 +43,22 @@ module.exports = {
         tight: 1.2,
       },
       fontSize: {
+        xl: "1.5rem",
+        "4xl": "2rem",
         "5xl": "2.5rem",
-        "6xl": "2.75rem",
+        "6xl": "3.25rem",
         "7xl": "4.5rem",
         "8xl": "6.25rem",
       },
       boxShadow: {
         small: "0 5px 10px rgba(0, 0, 0, 0.12)",
         medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
+        inner: "inset 0px 0px 100px rgba(0, 0, 0, 0.16)",
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-filters"),
+  ],
 };

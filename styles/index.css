@@ -9,7 +9,15 @@
 /* Write you own custom component styles here */
 
 .wrapper {
-  @apply max-w-screen-sm mx-auto;
+  @apply max-w-screen-md mx-auto;
+}
+
+h1 {
+  @apply text-5xl sm:text-6xl font-black leading-tight;
+}
+
+h2 {
+  @apply text-4xl font-black leading-tight;
 }
 
 p {

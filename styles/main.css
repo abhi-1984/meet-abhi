@@ -3,3 +3,49 @@
 input {
   outline: none;
 }
+
+.abstract {
+  filter: blur(100px);
+  border-radius: 40px;
+  opacity: 0.5;
+}
+
+.abstract-normal {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #34beea 0deg,
+    #2b3cdd 55.62deg,
+    #e23569 126.87deg,
+    #ab31e5 185deg,
+    #26a2a2 275deg,
+    #34beea 360deg
+  );
+
+  z-index: 1;
+}
+
+.abstract-hard-light {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #e531de 0deg,
+    #7eefef 183.13deg,
+    #8b29ed 360deg
+  );
+  mix-blend-mode: hard-light;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.abstract-multiply {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #dda02b 0deg,
+    #7531e5 185deg,
+    #26a28c 360deg
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  border-radius: 40px;
+
+  z-index: 3;
+}

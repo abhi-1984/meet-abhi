@@ -1,15 +1,40 @@
 import Link from "next/link";
+import { DribbbleIcon, LinkedInIcon, TwitterIcon } from "./icons";
 
 export default function Footer() {
   return (
-    <footer className="px-4 py-4">
+    <footer className="py-12 px-10 border-t border-solid border-white border-opacity-10">
       <div className="wrapper flex items-center justify-between">
-        <div className="opacity-60">© {new Date().getFullYear()} Abhi</div>
+        <div className="opacity-60">Abhishek © {new Date().getFullYear()}</div>
         <div className="grid grid-flow-col auto-cols-max gap-8">
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-          <div className="hidden sm:block">hello@meet-abhi.com</div>
+          <a
+            href="https://www.twitter.com/_abhiii"
+            rel="noopener noreferrer"
+            target="_blank"
+            tabIndex={0}
+            className="hover:opacity-60"
+          >
+            <TwitterIcon />
+          </a>
+          <a
+            href="https://dribbble.com/_abhiii"
+            target="_blank"
+            rel="noopener noreferrer"
+            target="_blank"
+            tabIndex={0}
+            className="hover:opacity-60"
+          >
+            <DribbbleIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/origine/"
+            rel="noopener noreferrer"
+            target="_blank"
+            tabIndex={0}
+            className="hover:opacity-60"
+          >
+            <LinkedInIcon />
+          </a>
         </div>
       </div>
     </footer>

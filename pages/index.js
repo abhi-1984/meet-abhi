@@ -1,51 +1,34 @@
 import { useState } from "react";
 import Layout from "../components/layout";
-import Project1Teaser from "../public/assets/homepage/project-1.mp4";
-import Project2Teaser from "../public/assets/homepage/project-2.mp4";
-import Project3Teaser from "../public/assets/homepage/project-3.mp4";
-import Project4Teaser from "../public/assets/homepage/project-4.mp4";
-import Project5Teaser from "../public/assets/homepage/project-5.mp4";
-import Project6Teaser from "../public/assets/homepage/iShuffle.mp4";
+
 import LazyLoad from "react-lazyload";
 import Head from "next/head";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import Testimonial from "../components/testimonial";
+import Footer from "../components/footer";
 
 export default function Index({}) {
   const [projects] = useState([
     {
       id: 1,
-      teaser: Project1Teaser,
+      teaserPath: "/assets/homepage/project-1.png",
       title: "Samespace Analytics",
       description:
-        "I helped to design powerful business intelligence tool that makes data visualization and exploration easy with flexible filtering, scheduling, and customization.",
+        "I helped to design powerful business intelligence tool that makes data visualization and exploration easy with flexible filtering, scheduling, and customization options for a 360-degree view of contact center.",
     },
     {
       id: 2,
-      teaser: Project2Teaser,
-      title: "Samespace Studio",
+      teaserPath: "/assets/homepage/project-2.png",
+      title: "tlkn",
       description:
-        "I was knee deep with the team through the entire thing—from defining problems, to scoping down the work, to executing on visual design, to building individual nodes, to working with engineers to polish to the final product.",
+        "Founded on principle of Privacy by Design I designed entire calling experience. And the outcome? Simplified user experience which inspires people to talk again.",
     },
     {
       id: 3,
-      teaser: Project3Teaser,
-      title: "Samespace Dock",
+      teaserPath: "/assets/homepage/project-3.png",
+      title: "iShuffle",
       description:
-        "I helped to re-imagine Samespace Dock with features like AI Assistance, Social Media Support and Native Integration with Salesforce.",
-    },
-    {
-      id: 4,
-      teaser: Project4Teaser,
-      title: "tlkn",
-      description:
-        "Based on principle of Privacy by Design I made an visual design which inspires people to talk again instead of sending emojis. Entire calling experience was re-imagined and re-engineered. And the outcome? Pure Simplicity.",
-    },
-    {
-      id: 1,
-      teaser: Project5Teaser,
-      title: "Samespace Messenger",
-      description:
-        "I helped redesign the Messenger, which is used by thousands of users every month. The Samespace messenger allows to chat or talk with website visitors in real-time and capture leads.",
+        "iShuffle is a chrome extension that controls media playback from Spotify, Apple Music, Youtube, SoundCloud and Amazon Music. It helps to control music no matter where you are with one click.",
     },
   ]);
 
@@ -55,166 +38,107 @@ export default function Index({}) {
         <Head>
           <title>Meet abhi</title>
         </Head>
-        <section className="px-6 py-12">
-          <div className="wrapper">
-            <p>Hi. Nice to meet you!</p>
-            <br />
-            <p>
-              I’m Abhi, a digital product designer working at Samespace. I love
-              solving complex business problems with beautiful and clean user
-              interfaces. I am passionate about design systems, user experience
-              and intersection of design and engineering.
-            </p>
-            <br />
-            <div className="grid grid-cols-2 sm:grid-flow-col sm:auto-cols-fr gap-4">
-              <motion.a
-                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
-                whileTap={{ scale: 0.96 }}
-                href="https://www.twitter.com/_abhiii"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-                tabIndex={0}
-              >
-                Twitter
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
-                whileTap={{ scale: 0.96 }}
-                href="https://www.dribbble.com/_abhiii"
-                rel="noopener noreferrer"
-                target="_blank"
-                tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-              >
-                Dribbble
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
-                whileTap={{ scale: 0.96 }}
-                href="https://www.behance.com/_abhiii"
-                rel="noopener noreferrer"
-                target="_blank"
-                tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-              >
-                Behance
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
-                whileTap={{ scale: 0.96 }}
-                href="../public/assets/common/resume.pdf"
-                download
-                tabIndex={0}
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer   focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-              >
-                Resume
-              </motion.a>
+        <section className="py-20 px-10 overflow-hidden">
+          <div className="wrapper grid grid-cols-1 md:grid-cols-12 gap-10 relative items-center">
+            <div className="col-span-1 md:col-span-7">
+              <Image src="/assets/common/logo.png" width="64px" height="64px" />
+              <h1 className="my-8">
+                Hey there. <br /> I'm Abhishek.
+              </h1>
+              <p>
+                I’m a product designer with 5 years of experience with a keen
+                eye for creating engaging UI, bringing products to life.
+              </p>
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a
+                  href="https://www.twitter.com/_abhiii"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="inline-flex items-center justify-center w-auto py-2 border border-solid border-white border-opacity-20 rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:bg-white hover:text-black transition duration-300"
+                  tabIndex={0}
+                >
+                  Twitter
+                </a>
+                <a
+                  href="https://www.dribbble.com/_abhiii"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="inline-flex items-center justify-center w-auto py-2 border border-solid border-white border-opacity-20 rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:bg-white hover:text-black transition duration-300"
+                  tabIndex={0}
+                >
+                  Dribbble
+                </a>
+
+                <button className="inline-flex items-center justify-center w-auto py-2 bg-white text-black rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:shadow-inner transition duration-300">
+                  Get in Touch
+                </button>
+              </div>
+            </div>
+            <div className="abstract absolute md:col-span-5 md:relative w-300 h-300">
+              <div className="absolute inset-0  abstract-multiply w-full"></div>
+              <div className="absolute inset-0  abstract-hard-light w-full animate-spin "></div>
+              <div className="absolute inset-0  abstract-normal w-full animate-spin-slow"></div>
             </div>
           </div>
         </section>
 
-        <section className="px-6 py-12">
-          <div className="wrapper grid grid-flow-row auto-row-max gap-24">
+        <section className="pb-20 px-10">
+          <div className="wrapper grid grid-flow-row auto-rows-auto gap-20">
             {projects.map((project) => {
               return (
-                <div key={project.id} className="">
-                  <div className="aspect-w-4 aspect-h-3 rounded-md overflow-hidden border border-solid border-opacity-10">
-                    <LazyLoad height={"100%"} once>
-                      <video
-                        autoPlay
-                        loop
-                        playsInline
-                        controls={false}
-                        muted
-                        className=""
-                        src={project.teaser}
-                      />
-                    </LazyLoad>
+                <div key={project.id}>
+                  <div className="w-full aspect-w-4 aspect-h-2 rounded-lg overflow-hidden">
+                    <Image
+                      src={project.teaserPath}
+                      layout="fill"
+                      objectFit="cover"
+                    />
                   </div>
-
-                  <p className="mt-6 mb-1 font-bold">{project.title}</p>
-                  <p className="dark:text-opacity-60 dark:text-white">
-                    {project.description}
-                  </p>
+                  <h2 className="mt-9 mb-4">{project.title}</h2>
+                  <p className="opacity-60">{project.description}</p>
                 </div>
               );
             })}
           </div>
         </section>
 
-        <div className="wrapper h-px  dark:bg-white bg-black bg-opacity-10"></div>
+        <Testimonial />
 
-        <section className="px-6 py-12">
-          <div className="wrapper">
-            <p className="mb-6">
-              At some point during my design life I decided to start building
-              things for myself, and understand how code works. Here is one of
-              those things.
-            </p>
-            <video
-              autoPlay
-              loop
-              playsInline
-              controls={false}
-              muted
-              className="rounded-md"
-              src={Project6Teaser}
-            />
-            <p className="mt-6 mb-1 font-bold">iShuffle</p>
-            <p>
-              iShuffle is a chrome extension that controls media playback from
-              Spotify, Apple Music, Youtube, SoundCloud and Amazon Music. It
-              helps to control music no matter where you are with one click.
-            </p>
-            <br />
-            <motion.a
-              whileHover={{ scale: 1.05, backgroundColor: "#FEA82F" }}
-              whileTap={{ scale: 0.96 }}
-              rel="noopener noreferrer"
-              target="_blank"
-              tabIndex={0}
-              className="inline-flex px-6 py-3 bg-gray-100 dark:text-black dark:bg-accent rounded-md font-medium cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-              href="https://chrome.google.com/webstore/detail/ishuffle/cdnnpipncmghbcfkadecjchajedkegbc?hl=en"
-            >
-              Download iShuffle
-            </motion.a>
+        <section className="py-20 px-10">
+          <div className="wrapper grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div>
+              <p className="font-black">Join my email list</p>
+              <p className="opacity-70 break-words mt-3 mb-6">
+                Get UX Tips & occasional{" "}
+                <span className="block">note-worthy things.</span>
+              </p>
+              <form className="w-full flex">
+                <input
+                  type="email"
+                  required
+                  placeholder="Your Email"
+                  className="flex-1 text-white bg-white bg-opacity-10 p-2.5 rounded-md"
+                />
+                <button
+                  type="submit"
+                  className="ml-4 inline-flex items-center justify-center w-32 py-2.5 bg-white text-black rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:shadow-inner transition duration-300"
+                >
+                  Join
+                </button>
+              </form>
+            </div>
+
+            <div>
+              <p className="font-black">Have a project in mind? </p>
+              <p className="opacity-70 break-words mt-3 mb-6">
+                Have an exciting project where you need some help?
+              </p>
+              <p className="underline cursor-pointer hover:opacity-70">
+                Get in touch
+              </p>
+            </div>
           </div>
         </section>
-
-        <div className="wrapper h-px bg-black dark:bg-white bg-opacity-10"></div>
-
-        <section className="px-6 py-12">
-          <div className="wrapper">
-            <p>
-              Join my email list and get free design stuff and occasional
-              note-worthy things from me.
-            </p>
-            <form className="grid grid-flow-row auto-rows-fr gap-6 sm:grid-cols-5 mt-6 sm:gap-3">
-              <input
-                className="p-2 col-span-2 border border-solid border-gray-300 focus:border-accent focus:no-outline focus:ring focus:ring-accent rounded-md"
-                type="text"
-                aria-label="Full name"
-                placeholder="Full Name"
-              />
-              <input
-                className="p-2 col-span-2 border border-solid border-gray-300 focus:border-accent focus:no-outline focus:ring focus:ring-accent rounded-md"
-                type="email"
-                aria-label="Your Email"
-                placeholder="Your Email"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.96 }}
-                className="col-span-2 sm:col-span-1 bg-accent rounded-md font-medium focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50"
-              >
-                Join
-              </motion.button>
-            </form>
-          </div>
-        </section>
-
-        <div className="wrapper h-px bg-black bg-opacity-10"></div>
       </Layout>
     </>
   );
