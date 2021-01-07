@@ -5,7 +5,7 @@ import LazyLoad from "react-lazyload";
 import Head from "next/head";
 import Image from "next/image";
 import Testimonial from "../components/testimonial";
-import Footer from "../components/footer";
+import TextLoop from "react-text-loop";
 
 export default function Index({}) {
   const [projects] = useState([
@@ -43,7 +43,18 @@ export default function Index({}) {
             <div className="col-span-1 md:col-span-7">
               <Image src="/assets/common/logo.png" width="64px" height="64px" />
               <h1 className="my-8">
-                Hey there. <br /> I'm Abhishek.
+                <TextLoop mask>
+                  <span>Hi!</span>
+                  <span>Hola!</span>
+                  <span>Ciao!</span>
+                  <span>Salut!</span>
+                  <span>Olá!</span>
+                  <span>Namasté!</span>
+                  <span>Marhabaan!</span>
+                  <span>Privet!</span>
+                  <span>Hallå!</span>
+                </TextLoop>{" "}
+                <br /> I'm Abhishek.
               </h1>
               <p>
                 I’m a product designer with 5 years of experience with a keen
