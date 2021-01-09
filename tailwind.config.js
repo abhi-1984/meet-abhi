@@ -33,7 +33,7 @@ module.exports = {
       },
       height: {
         300: "300px",
-        500: "500px",
+        440: "440px",
       },
       letterSpacing: {
         tighter: "-.04em",
@@ -43,6 +43,7 @@ module.exports = {
         tight: 1.2,
       },
       fontSize: {
+        lg: "1.25rem",
         xl: "1.5rem",
         "4xl": "2rem",
         "5xl": "2.5rem",
