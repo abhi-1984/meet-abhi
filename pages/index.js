@@ -53,7 +53,6 @@ export default function Index({}) {
                   <span>Olá!</span>
                   <span>Marhabaan!</span>
                   <span>Privet!</span>
-                  <span>Hallå!</span>
                 </TextLoop>{" "}
                 <br /> I'm Abhishek.
               </h1>
