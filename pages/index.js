@@ -46,11 +46,11 @@ export default function Index({}) {
               <h1 className="my-8">
                 <TextLoop mask>
                   <span>Hi!</span>
+                  <span>Namasté!</span>
                   <span>Hola!</span>
                   <span>Ciao!</span>
                   <span>Salut!</span>
                   <span>Olá!</span>
-                  <span>Namasté!</span>
                   <span>Marhabaan!</span>
                   <span>Privet!</span>
                   <span>Hallå!</span>
