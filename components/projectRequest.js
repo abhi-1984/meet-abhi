@@ -28,7 +28,7 @@ export default function ProjectRequest() {
         {services.map((service) => {
           return (
             <div
-              className="w-full p-4 bg-black border border-solid border-white border-opacity-10 rounded-md flex items-center justify-center flex-col cursor-pointer"
+              className="w-full p-4 bg-black border border-solid border-white border-opacity-10 rounded-md flex items-center justify-center flex-col cursor-pointer hover:border-opacity-100 transform hover:scale-95 transition duration-300"
               key={service.id}
             >
               <div className="flex items-center justify-center w-20 h-20 my-4">
