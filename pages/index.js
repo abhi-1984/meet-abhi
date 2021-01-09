@@ -39,7 +39,7 @@ export default function Index({}) {
         <Head>
           <title>Meet abhi</title>
         </Head>
-        <section className="py-20 px-10 overflow-hidden">
+        <section className="pt-20 pb-10 px-10 overflow-hidden">
           <div className="wrapper grid grid-cols-1 md:grid-cols-12 gap-10 relative items-center">
             <div className="col-span-1 md:col-span-7">
               <Image src="/assets/common/logo.png" width="64px" height="64px" />
@@ -94,7 +94,7 @@ export default function Index({}) {
           </div>
         </section>
 
-        <section className="pb-20 px-10">
+        <section className="pt-10 pb-20 px-10" id="work">
           <div className="wrapper grid grid-flow-row auto-rows-auto gap-20">
             {projects.map((project) => {
               return (

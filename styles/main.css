@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/gxk6kpv.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 input {
   outline: none;
 }

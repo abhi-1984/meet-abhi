@@ -10,7 +10,7 @@ export default function Nav() {
           <a className="focus:outline-none text-xl">ab.</a>
         </Link>
         <div className="hidden sm:grid grid-flow-col auto-cols-max gap-10 items-center relative z-10">
-          <Link href="/">
+          <Link href="/#work">
             <a className="relative z-10 focus:outline-none hover:text-accent focus:ring focus:ring-opacity-50 focus:ring-accent">
               Work
             </a>
