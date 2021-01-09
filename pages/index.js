@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Layout from "../components/layout";
 
-import LazyLoad from "react-lazyload";
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import Testimonial from "../components/testimonial";
 import TextLoop from "react-text-loop";
@@ -94,7 +94,7 @@ export default function Index({}) {
           </div>
         </section>
 
-        <section className="pt-10 pb-20 px-10" id="work">
+        <section className="pt-10 pb-20 px-10">
           <div className="wrapper grid grid-flow-row auto-rows-auto gap-20">
             {projects.map((project) => {
               return (
@@ -132,9 +132,11 @@ export default function Index({}) {
               <p className="opacity-70 break-words mt-3 mb-6">
                 Have an exciting project where you need some help?
               </p>
-              <p className="underline cursor-pointer hover:opacity-70">
-                Get in touch
-              </p>
+              <Link href="/get-in-touch">
+                <a className="inline-flex items-center justify-center px-6 py-3 border border-solid border-white border-opacity-20 rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:bg-white hover:text-black transition duration-300">
+                  Get in touch
+                </a>
+              </Link>
             </div>
           </div>
         </section>

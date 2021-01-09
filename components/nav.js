@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Nav() {
   return (
@@ -10,7 +8,7 @@ export default function Nav() {
           <a className="focus:outline-none text-xl">ab.</a>
         </Link>
         <div className="hidden sm:grid grid-flow-col auto-cols-max gap-10 items-center relative z-10">
-          <Link href="/#work">
+          <Link href="/">
             <a className="relative z-10 focus:outline-none hover:text-accent focus:ring focus:ring-opacity-50 focus:ring-accent">
               Work
             </a>
@@ -20,9 +18,11 @@ export default function Nav() {
               About
             </a>
           </Link>
-          <button className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent">
-            Get in Touch
-          </button>
+          <Link href="/get-in-touch">
+            <a className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent">
+              Get in Touch
+            </a>
+          </Link>
         </div>
       </div>
     </nav>
