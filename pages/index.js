@@ -6,6 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Testimonial from "../components/testimonial";
 import TextLoop from "react-text-loop";
+import NewsLetter from "../components/newsletter";
 
 export default function Index({}) {
   const [projects] = useState([
@@ -123,20 +124,7 @@ export default function Index({}) {
                 Get UX Tips & occasional{" "}
                 <span className="block">note-worthy things.</span>
               </p>
-              <form className="w-full flex">
-                <input
-                  type="email"
-                  required
-                  placeholder="Your Email"
-                  className="flex-1 text-white bg-white bg-opacity-10 p-2.5 rounded-md"
-                />
-                <button
-                  type="submit"
-                  className="ml-4 inline-flex items-center justify-center w-32 py-2.5 bg-white text-black rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:shadow-inner transition duration-300"
-                >
-                  Join
-                </button>
-              </form>
+              <NewsLetter />
             </div>
 
             <div>

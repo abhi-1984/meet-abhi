@@ -9,21 +9,26 @@
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "autoprefixer": "^10.1.0",
+    "axios": "^0.21.1",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
+    "formik": "^2.2.6",
     "framer-motion": "^3.1.1",
     "gray-matter": "4.0.2",
     "next": "latest",
     "next-videos": "1.4.0",
     "postcss": "^8.2.1",
     "react": "^16.13.0",
+    "react-cookie": "^4.0.3",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^16.13.0",
     "react-lazyload": "^3.1.0",
     "react-player": "^2.7.2",
     "react-text-loop": "^2.3.0",
     "remark": "11.0.2",
     "remark-html": "10.0.0",
-    "tailwindcss-filters": "^3.0.0"
+    "tailwindcss-filters": "^3.0.0",
+    "yup": "^0.32.8"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
