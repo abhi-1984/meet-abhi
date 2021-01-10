@@ -20,6 +20,7 @@ module.exports = {
       backdropFilter: {
         none: "none",
         blur: "blur(10px)",
+        overlay: "blur(40px)",
       },
       screens: {
         xs: "400px",

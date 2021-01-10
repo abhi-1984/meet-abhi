@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Nav() {
+export default function Nav({ handleGetInTouchPopover }) {
   return (
     <nav className="px-10 py-3 fixed top-0 left-0 right-0 bg-black bg-opacity-90 backdrop-blur z-40">
       <div className="wrapper flex items-center justify-between relative">
@@ -18,11 +18,13 @@ export default function Nav() {
               About
             </a>
           </Link>
-          <Link href="/get-in-touch">
-            <a className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent">
-              Get in Touch
-            </a>
-          </Link>
+
+          <button
+            onClick={() => handleGetInTouchPopover()}
+            className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent"
+          >
+            Get in Touch
+          </button>
         </div>
       </div>
     </nav>
