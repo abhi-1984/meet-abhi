@@ -1,13 +1,15 @@
 import Layout from "../components/layout";
+import dynamic from "next/dynamic";
 import { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
-
+import LazyLoad from "react-lazyload";
 import Image from "next/image";
 import Testimonial from "../components/testimonial";
 import TextLoop from "react-text-loop";
 import NewsLetter from "../components/newsletter";
 import { AnimatePresence, motion } from "framer-motion";
-import ContactPopover from "../components/contactPopover";
+
+const ContactPopover = dynamic(() => import("../components/contactPopover"));
 
 export default function Index({}) {
   const [projects] = useState([
@@ -95,7 +97,7 @@ export default function Index({}) {
                 </TextLoop>{" "}
                 <br /> I'm Abhishek.
               </h1>
-              <p>
+              <p className="opacity-70">
                 I’m a product designer with 5 years of experience with a keen
                 eye for creating engaging UI, bringing products to life.
               </p>
@@ -140,15 +142,17 @@ export default function Index({}) {
             {projects.map((project) => {
               return (
                 <div key={project.id}>
-                  <div className="w-full aspect-w-4 aspect-h-2 rounded-lg overflow-hidden">
-                    <Image
-                      src={project.teaserPath}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
+                  <LazyLoad height={400} once>
+                    <div className="w-full aspect-w-4 aspect-h-2 rounded-lg overflow-hidden">
+                      <Image
+                        src={project.teaserPath}
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    </div>
+                  </LazyLoad>
                   <h2 className="mt-9 mb-4">{project.title}</h2>
-                  <p className="opacity-60">{project.description}</p>
+                  <p className="opacity-70">{project.description}</p>
                 </div>
               );
             })}
@@ -161,7 +165,7 @@ export default function Index({}) {
           <div className="wrapper grid grid-cols-1 md:grid-cols-2 gap-20">
             <div>
               <p className="font-black">Join my email list</p>
-              <p className="opacity-70 break-words mt-3 mb-6">
+              <p className="opacity-70 break-words mt-3 mb-6 text-lg">
                 Get UX Tips & occasional{" "}
                 <span className="block">note-worthy things.</span>
               </p>
@@ -170,7 +174,7 @@ export default function Index({}) {
 
             <div>
               <p className="font-black">Have a project in mind? </p>
-              <p className="opacity-70 break-words mt-3 mb-6">
+              <p className="opacity-70 break-words mt-3 mb-6 text-lg">
                 Have an exciting project where you need some help?
               </p>
 

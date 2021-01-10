@@ -31,12 +31,12 @@ export default function Nav({ handleGetInTouchPopover }) {
         </Link>
         <div className="grid grid-flow-col auto-cols-max gap-6 sm:gap-10 items-center relative z-10">
           <Link href="/">
-            <a className="hidden sm:inline focus:outline-none hover:text-accent focus:ring focus:ring-opacity-50 focus:ring-accent">
+            <a className="hidden sm:inline focus:outline-none hover:opacity-60 focus:ring focus:ring-opacity-50 focus:ring-accent">
               Work
             </a>
           </Link>
           <Link href="/about">
-            <a className="focus:outline-none focus:ring hover:text-accent focus:ring-opacity-50 focus:ring-accent">
+            <a className="focus:outline-none focus:ring hover:opacity-60 focus:ring-opacity-50 focus:ring-accent">
               About
             </a>
           </Link>
