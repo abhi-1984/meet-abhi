@@ -27,6 +27,7 @@ export default function About() {
               src="/assets/common/me.png"
               layout="fill"
               objectFit="cover"
+              alt="Me reading bio of Steve"
             />
           </div>
         </div>

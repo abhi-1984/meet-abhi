@@ -23,7 +23,12 @@ export default function Nav({ handleGetInTouchPopover }) {
         <Link href="/">
           <a className="focus:outline-none text-xl">
             {scrollPosition >= 160 ? (
-              <Image src="/assets/common/logo.png" width="32px" height="32px" />
+              <Image
+                alt="Meet Abhi"
+                src="/assets/common/logo.png"
+                width="32px"
+                height="32px"
+              />
             ) : (
               <span>ab.</span>
             )}

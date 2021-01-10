@@ -18,7 +18,12 @@ export default function Testimonial() {
           </p>
         </div>
         <div className=" rounded-lg overflow-hidden w-24 h-24 md:w-auto md:h-auto mb-6 md:mb-0">
-          <Image src="/assets/common/james.png" width="240px" height="240px" />
+          <Image
+            alt="James Khan"
+            src="/assets/common/james.png"
+            width="240px"
+            height="240px"
+          />
         </div>
       </div>
     </section>

@@ -25,7 +25,12 @@ export default function ContactPopover({ handleGetInTouchPopover }) {
       <div className=" flex items-stretch justify-between flex-col h-full">
         <div className="flex-1 flex flex-col items-start">
           <div className="mb-8">
-            <Image src="/assets/common/logo.png" width="64px" height="64px" />
+            <Image
+              src="/assets/common/logo.png"
+              alt="Meet Abhi"
+              width="64px"
+              height="64px"
+            />
           </div>
           <span className="text-sm uppercase opacity-60 font-semibold">
             Don’t be shy

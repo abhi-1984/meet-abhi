@@ -88,3 +88,12 @@ input {
     #e734ca 360deg
   );
 }
+
+.orange-gradient-placeholder {
+  background: linear-gradient(
+    255.96deg,
+    #eeab29 0%,
+    #f15757 46.18%,
+    #e63fdf 100%
+  );
+}

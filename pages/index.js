@@ -31,6 +31,14 @@ export default function Index({}) {
     },
     {
       id: 3,
+      teaserPath: "/assets/homepage/project-4.png",
+      placeholderClass: "orange-gradient-placeholder",
+      title: "Samespace Dock",
+      description:
+        "I helped to re-imagine Samespace Dock with new features like AI Assistance, Omnichannel Support and CRM Integration.",
+    },
+    {
+      id: 4,
       teaserPath: "/assets/homepage/project-3.png",
       placeholderClass: "magenta-gradient-placeholder",
       title: "iShuffle",
@@ -86,7 +94,12 @@ export default function Index({}) {
         <section className="pt-20 pb-10 px-10 overflow-hidden">
           <div className="wrapper grid grid-cols-1 md:grid-cols-12 gap-10 relative items-center">
             <div className="col-span-1 md:col-span-7">
-              <Image src="/assets/common/logo.png" width="64px" height="64px" />
+              <Image
+                src="/assets/common/logo.png"
+                alt="Meet Abhi"
+                width="64px"
+                height="64px"
+              />
               <h1 className="my-8">
                 <TextLoop mask>
                   <span>Hi!</span>
@@ -155,6 +168,7 @@ export default function Index({}) {
                         src={project.teaserPath}
                         layout="fill"
                         objectFit="cover"
+                        alt={project.title ? project.title : "Project by Abhi"}
                       />
                     </div>
                   </LazyLoad>
