@@ -70,7 +70,7 @@ export default function About() {
             </a>
 
             <a
-              href="https://www.dribbble.com/_abhiii"
+              href="https://www.dropbox.com/s/91cdwc8nv940oz6/resume.pdf?dl=0"
               rel="noopener noreferrer"
               target="_blank"
               className="inline-flex items-center justify-center w-auto py-3 border border-solid border-white border-opacity-20 rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:bg-white hover:text-black transition duration-300"

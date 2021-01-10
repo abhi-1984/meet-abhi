@@ -36,11 +36,18 @@ export default function ContactPopover({ handleGetInTouchPopover }) {
         </div>
 
         <div className="grid grid-cols-1 gap-6">
+          <a
+            href="mailto:hello@meet-abhi.com"
+            className="flex md:hidden items-center p-4 bg-jetBlack rounded-md hover:bg-white hover:bg-opacity-10 transition duration-300"
+          >
+            <div className="w-6 h-6 flex items-center justify-center mr-2">
+              <MailIcon />
+            </div>
+            <div className="text-lg font-light">hello@meet-abhi.com</div>
+          </a>
           <div
             onClick={setCopied}
-            className={`${
-              isCopied && "bg-opacity-20"
-            } flex items-center p-4 bg-jetBlack rounded-md cursor-pointer group hover:bg-white hover:bg-opacity-10 transition duration-300`}
+            className={`hidden md:flex items-center p-4 bg-jetBlack rounded-md relative cursor-pointer group hover:bg-white hover:bg-opacity-10 transition duration-300`}
           >
             <div className="w-6 h-6 flex items-center justify-center mr-2">
               <MailIcon />
