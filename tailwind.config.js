@@ -31,6 +31,8 @@ module.exports = {
       },
       width: {
         300: "300px",
+        360: "360px",
+        400: "400px",
       },
       height: {
         300: "300px",

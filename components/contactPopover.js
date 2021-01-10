@@ -1,17 +1,21 @@
 import { LinkedInIcon, MailIcon, TwitterIcon } from "./icons";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ContactPopover() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: "-100%" }}
-      animate={{ opacity: 1, y: "0%" }}
-      exit={{ opacity: 0, y: "-100%" }}
-      transition={{ easings: "easeInOut" }}
-      className="px-10 pt-20 pb-10 bg-black text-white fixed top-0 left-0 right-0 z-50"
+      initial={{ opacity: 0, x: "100%" }}
+      animate={{ opacity: 1, x: "0%" }}
+      exit={{ opacity: 0, x: "100%" }}
+      transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.7 }}
+      className="px-20 pt-20 pb-10 bg-black text-white fixed top-0 bottom-0 right-0 z-50"
     >
-      <div className="wrapper grid sm:grid-flow-row md:grid-flow-col auto-cols-fr gap-10">
-        <div>
+      <div className="w-360 flex items-stretch justify-between flex-col h-full">
+        <div className="flex-1 flex flex-col items-start">
+          <div className="mb-8">
+            <Image src="/assets/common/logo.png" width="64px" height="64px" />
+          </div>
           <span className="text-sm uppercase opacity-60 font-semibold">
             Don’t be shy
           </span>
@@ -19,6 +23,7 @@ export default function ContactPopover() {
             Let's talk, share our vision and create something awesome together.
           </h3>
         </div>
+
         <div className="grid grid-cols-1 gap-6">
           <div className="flex items-center p-4 bg-jetBlack rounded-md cursor-pointer group hover:bg-white hover:bg-opacity-10 transition duration-300">
             <div className="w-6 h-6 flex items-center justify-center mr-2">
