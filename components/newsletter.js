@@ -81,13 +81,11 @@ export default function NewsLetter() {
           onSubmit={handleSubmit}
           autoComplete="off"
         >
-          <label for="email" className="hidden">
-            Receive promotional offers?
-          </label>
           <input
             type="email"
             name="email"
             id="email"
+            title="Sign up for newsletter"
             required
             placeholder="Your Email"
             value={values.email}
