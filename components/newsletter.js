@@ -87,6 +87,7 @@ export default function NewsLetter() {
           <input
             type="email"
             name="email"
+            id="email"
             required
             placeholder="Your Email"
             value={values.email}
