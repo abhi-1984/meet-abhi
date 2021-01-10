@@ -53,3 +53,38 @@ input {
 
   z-index: 3;
 }
+
+.purple-gradient-placeholder {
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #8145ff -35.58deg,
+    #388cf9 33.37deg,
+    #9640ff 136.2deg,
+    #4451fc 230.92deg,
+    #8145ff 324.42deg,
+    #388cf9 393.37deg
+  );
+}
+
+.teal-gradient-placeholder {
+  background: conic-gradient(
+    from 94.03deg at 14.12% 71.13%,
+    #75c7db -35.58deg,
+    #ff4abf 33.37deg,
+    #f375bb 136.2deg,
+    #57e6ca 230.92deg,
+    #75c7db 324.42deg,
+    #ff4abf 393.37deg
+  );
+}
+
+.magenta-gradient-placeholder {
+  background: conic-gradient(
+    from 245.31deg at 45% 50%,
+    #e734ca 0deg,
+    #188282 61.43deg,
+    #8e2ddc 180.77deg,
+    #3727ee 277.26deg,
+    #e734ca 360deg
+  );
+}

@@ -16,6 +16,7 @@ export default function Index({}) {
     {
       id: 1,
       teaserPath: "/assets/homepage/project-1.png",
+      placeholderClass: "purple-gradient-placeholder",
       title: "Samespace Analytics",
       description:
         "I helped to design powerful business intelligence tool that makes data visualization and exploration easy with flexible filtering, scheduling, and customization options for a 360-degree view of contact center.",
@@ -23,6 +24,7 @@ export default function Index({}) {
     {
       id: 2,
       teaserPath: "/assets/homepage/project-2.png",
+      placeholderClass: "teal-gradient-placeholder",
       title: "tlkn",
       description:
         "Founded on principle of Privacy by Design I designed entire calling experience. And the outcome? Simplified user experience which inspires people to talk again.",
@@ -30,6 +32,7 @@ export default function Index({}) {
     {
       id: 3,
       teaserPath: "/assets/homepage/project-3.png",
+      placeholderClass: "magenta-gradient-placeholder",
       title: "iShuffle",
       description:
         "iShuffle is a chrome extension that controls media playback from Spotify, Apple Music, Youtube, SoundCloud and Amazon Music. It helps to control music no matter where you are with one click.",
@@ -143,7 +146,11 @@ export default function Index({}) {
               return (
                 <div key={project.id}>
                   <LazyLoad height={400} once>
-                    <div className="w-full aspect-w-4 aspect-h-2 rounded-lg overflow-hidden">
+                    <div
+                      className={`w-full aspect-w-4 aspect-h-2 rounded-lg overflow-hidden ${
+                        project.placeholderClass ? project.placeholderClass : ""
+                      }`}
+                    >
                       <Image
                         src={project.teaserPath}
                         layout="fill"
