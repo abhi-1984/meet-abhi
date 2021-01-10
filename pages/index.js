@@ -5,7 +5,6 @@ import Head from "next/head";
 import LazyLoad from "react-lazyload";
 import Image from "next/image";
 import Testimonial from "../components/testimonial";
-import TextLoop from "react-text-loop";
 import NewsLetter from "../components/newsletter";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -101,16 +100,7 @@ export default function Index({}) {
                 height="64px"
               />
               <h1 className="my-8">
-                <TextLoop mask>
-                  <span>Hi!</span>
-                  <span>Namasté!</span>
-                  <span>Hola!</span>
-                  <span>Ciao!</span>
-                  <span>Salut!</span>
-                  <span>Olá!</span>
-                  <span>Marhabaan!</span>
-                  <span>Privet!</span>
-                </TextLoop>{" "}
+                Hey there.
                 <br /> I'm Abhishek.
               </h1>
               <p>
