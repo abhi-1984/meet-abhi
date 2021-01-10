@@ -7,9 +7,9 @@ export default function Nav({ handleGetInTouchPopover }) {
         <Link href="/">
           <a className="focus:outline-none text-xl">ab.</a>
         </Link>
-        <div className="hidden sm:grid grid-flow-col auto-cols-max gap-10 items-center relative z-10">
+        <div className="grid grid-flow-col auto-cols-max gap-6 sm:gap-10 items-center relative z-10">
           <Link href="/">
-            <a className="relative z-10 focus:outline-none hover:text-accent focus:ring focus:ring-opacity-50 focus:ring-accent">
+            <a className="hidden sm:inline focus:outline-none hover:text-accent focus:ring focus:ring-opacity-50 focus:ring-accent">
               Work
             </a>
           </Link>
@@ -19,7 +19,10 @@ export default function Nav({ handleGetInTouchPopover }) {
             </a>
           </Link>
 
-          <button className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent">
+          <button
+            onClick={() => handleGetInTouchPopover()}
+            className="font-semibold px-2 sm:px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent"
+          >
             Get in Touch
           </button>
         </div>
