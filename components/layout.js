@@ -41,7 +41,7 @@ export default function Layout({ preview, children }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ easings: "easeInOut" }}
-              className="fixed z-50 bg-black bg-opacity-90 backdrop-overlay text-white inset-0 "
+              className="fixed z-50 bg-black bg-opacity-80 backdrop-overlay text-white inset-0 "
               onClick={() => handleGetInTouchPopover()}
             />
             <ContactPopover handleGetInTouchPopover={handleGetInTouchPopover} />

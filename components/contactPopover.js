@@ -1,15 +1,20 @@
 import { CloseIcon, LinkedInIcon, MailIcon, TwitterIcon } from "./icons";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import useClipboard from "react-use-clipboard";
 
 export default function ContactPopover({ handleGetInTouchPopover }) {
+  const [isCopied, setCopied] = useClipboard("hello@meet-abhi.com", {
+    successDuration: 1000,
+  });
+
   return (
     <motion.section
       initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: "0%" }}
       exit={{ opacity: 0, x: "100%" }}
       transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.7 }}
-      className="w-400 max-w-full px-10 pt-20 pb-10 bg-black text-white fixed top-0 bottom-0 right-0 z-50"
+      className="w-440 max-w-full px-10 pt-20 pb-10 bg-black text-white fixed top-0 bottom-0 right-0 z-50"
     >
       <div
         onClick={() => handleGetInTouchPopover()}
@@ -31,14 +36,22 @@ export default function ContactPopover({ handleGetInTouchPopover }) {
         </div>
 
         <div className="grid grid-cols-1 gap-6">
-          <div className="flex items-center p-4 bg-jetBlack rounded-md cursor-pointer group hover:bg-white hover:bg-opacity-10 transition duration-300">
+          <div
+            onClick={setCopied}
+            className={`${
+              isCopied && "bg-opacity-20"
+            } flex items-center p-4 bg-jetBlack rounded-md cursor-pointer group hover:bg-white hover:bg-opacity-10 transition duration-300`}
+          >
             <div className="w-6 h-6 flex items-center justify-center mr-2">
               <MailIcon />
             </div>
             <div className="text-lg font-light flex-1">hello@meet-abhi.com</div>
 
-            <div className="hidden md:flex px-2 py-1 bg-white rounded font-semibold text-black opacity-0 group-hover:opacity-100 transition duration-300">
-              Copy
+            <div
+              onClick={setCopied}
+              className="hidden md:flex px-2 py-1 bg-white rounded font-semibold text-black opacity-0 group-hover:opacity-100 transition duration-300"
+            >
+              {isCopied ? "Copied" : "Copy"}
             </div>
           </div>
           <a
