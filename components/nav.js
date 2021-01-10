@@ -19,10 +19,7 @@ export default function Nav({ handleGetInTouchPopover }) {
             </a>
           </Link>
 
-          <button
-            onClick={() => handleGetInTouchPopover()}
-            className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent"
-          >
+          <button className="font-semibold px-4 py-2 bg-accent text-black rounded-md hover:shadow-inner  focus:outline-none  focus:ring focus:ring-opacity-50 focus:ring-accent">
             Get in Touch
           </button>
         </div>

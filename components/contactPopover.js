@@ -1,17 +1,23 @@
-import { LinkedInIcon, MailIcon, TwitterIcon } from "./icons";
+import { CloseIcon, LinkedInIcon, MailIcon, TwitterIcon } from "./icons";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
-export default function ContactPopover() {
+export default function ContactPopover({ handleGetInTouchPopover }) {
   return (
     <motion.section
       initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: "0%" }}
       exit={{ opacity: 0, x: "100%" }}
       transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.7 }}
-      className="px-20 pt-20 pb-10 bg-black text-white fixed top-0 bottom-0 right-0 z-50"
+      className="w-400 max-w-full px-10 pt-20 pb-10 bg-black text-white fixed top-0 bottom-0 right-0 z-50"
     >
-      <div className="w-360 flex items-stretch justify-between flex-col h-full">
+      <div
+        onClick={() => handleGetInTouchPopover()}
+        className="absolute right-8 top-8 opacity-20 cursor-pointer hover:opacity-100 duration-300 transition"
+      >
+        <CloseIcon />
+      </div>
+      <div className=" flex items-stretch justify-between flex-col h-full">
         <div className="flex-1 flex flex-col items-start">
           <div className="mb-8">
             <Image src="/assets/common/logo.png" width="64px" height="64px" />

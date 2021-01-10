@@ -44,7 +44,7 @@ export default function Layout({ preview, children }) {
               className="fixed z-50 bg-black bg-opacity-90 backdrop-overlay text-white inset-0 "
               onClick={() => handleGetInTouchPopover()}
             />
-            <ContactPopover />
+            <ContactPopover handleGetInTouchPopover={handleGetInTouchPopover} />
           </>
         )}
       </AnimatePresence>

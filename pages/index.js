@@ -1,12 +1,13 @@
-import { useState } from "react";
 import Layout from "../components/layout";
-
+import { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
-import Link from "next/link";
+
 import Image from "next/image";
 import Testimonial from "../components/testimonial";
 import TextLoop from "react-text-loop";
 import NewsLetter from "../components/newsletter";
+import { AnimatePresence, motion } from "framer-motion";
+import ContactPopover from "../components/contactPopover";
 
 export default function Index({}) {
   const [projects] = useState([
@@ -33,12 +34,50 @@ export default function Index({}) {
     },
   ]);
 
+  const [showGetInTouchPopover, setShowGetInTouchPopover] = useState(false);
+
+  const handleGetInTouchPopover = () => {
+    setShowGetInTouchPopover(!showGetInTouchPopover);
+  };
+
+  const escFunction = useCallback((event) => {
+    if (event.keyCode === 27) {
+      //Do whatever when esc is pressed
+      setShowGetInTouchPopover(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, []);
+
   return (
     <>
       <Layout>
         <Head>
           <title>Meet abhi</title>
         </Head>
+        <AnimatePresence>
+          {showGetInTouchPopover && (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ easings: "easeInOut" }}
+                className="fixed z-50 bg-black bg-opacity-90 backdrop-overlay text-white inset-0 "
+                onClick={() => handleGetInTouchPopover()}
+              />
+              <ContactPopover
+                handleGetInTouchPopover={handleGetInTouchPopover}
+              />
+            </>
+          )}
+        </AnimatePresence>
         <section className="pt-20 pb-10 px-10 overflow-hidden">
           <div className="wrapper grid grid-cols-1 md:grid-cols-12 gap-10 relative items-center">
             <div className="col-span-1 md:col-span-7">
@@ -80,7 +119,10 @@ export default function Index({}) {
                   Dribbble
                 </a>
 
-                <button className="inline-flex items-center justify-center w-auto py-2 bg-white text-black rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:shadow-inner transition duration-300">
+                <button
+                  onClick={() => handleGetInTouchPopover()}
+                  className="inline-flex items-center justify-center w-auto py-2 bg-white text-black rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:shadow-inner transition duration-300"
+                >
                   Get in Touch
                 </button>
               </div>
@@ -131,11 +173,13 @@ export default function Index({}) {
               <p className="opacity-70 break-words mt-3 mb-6">
                 Have an exciting project where you need some help?
               </p>
-              <Link href="/get-in-touch">
-                <a className="inline-flex items-center justify-center px-6 py-3 border border-solid border-white border-opacity-20 rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:bg-white hover:text-black transition duration-300">
-                  Get in touch
-                </a>
-              </Link>
+
+              <button
+                onClick={() => handleGetInTouchPopover()}
+                className="inline-flex items-center justify-center px-6 py-3 border border-solid border-white border-opacity-20 rounded-md font-semibold cursor-pointer focus:outline-none focus:ring focus:ring-accent focus:ring-opacity-50 hover:bg-white hover:text-black transition duration-300"
+              >
+                Get in touch
+              </button>
             </div>
           </div>
         </section>
