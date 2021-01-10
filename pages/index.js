@@ -113,7 +113,7 @@ export default function Index({}) {
                 </TextLoop>{" "}
                 <br /> I'm Abhishek.
               </h1>
-              <p className="opacity-70">
+              <p>
                 I’m a product designer with 5 years of experience with a keen
                 eye for creating engaging UI, bringing products to life.
               </p>
