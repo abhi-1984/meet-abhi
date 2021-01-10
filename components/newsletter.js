@@ -48,7 +48,6 @@ export default function NewsLetter() {
           }
         )
         .then((response) => {
-          console.log("response is ", response);
           setTimeout(() => {
             setLoading(false);
             setFormSubmitted(true);
@@ -82,6 +81,9 @@ export default function NewsLetter() {
           onSubmit={handleSubmit}
           autoComplete="off"
         >
+          <label for="email" className="hidden">
+            Receive promotional offers?
+          </label>
           <input
             type="email"
             name="email"

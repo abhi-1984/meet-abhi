@@ -13,6 +13,7 @@ export default function Footer() {
             target="_blank"
             tabIndex={0}
             className="hover:opacity-60"
+            aria-label="Follow Abhishek on Twitter"
           >
             <TwitterIcon />
           </a>
@@ -23,6 +24,7 @@ export default function Footer() {
             target="_blank"
             tabIndex={0}
             className="hover:opacity-60"
+            aria-label="Follow Abhishek on Dribbble"
           >
             <DribbbleIcon />
           </a>
@@ -32,6 +34,7 @@ export default function Footer() {
             target="_blank"
             tabIndex={0}
             className="hover:opacity-60"
+            aria-label="Connect with  Abhishek on LinkedIn"
           >
             <LinkedInIcon />
           </a>
