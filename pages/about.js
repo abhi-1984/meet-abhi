@@ -36,7 +36,17 @@ export default function About() {
         <div className="wrapper">
           <h1 className="pb-10">Hi, I'm Abhi 👋</h1>
           <p className="pb-10 opacity-80">
-            Currently working with Samespace as Senior Product Designer.
+            Currently working with{" "}
+            <a
+              href="https://www.samespace.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              tabIndex={0}
+              className="underline"
+            >
+              Samespace
+            </a>{" "}
+            as Senior Product Designer.
           </p>
           <p className="pb-10 opacity-80">
             I live for the entire design process: from the messy beginnings to
