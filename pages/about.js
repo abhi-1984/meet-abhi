@@ -22,7 +22,7 @@ export default function About() {
       </Head>
       <section className="pt-20 pb-10 px-10">
         <div className="wrapper">
-          <div className="w-full aspect-w-4 h-440  rounded-md overflow-hidden">
+          <div className="w-full aspect-w-4 aspect-h-3 rounded-md overflow-hidden">
             <Image
               src="/assets/common/me.png"
               layout="fill"
