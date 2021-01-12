@@ -38,6 +38,7 @@ module.exports = {
       height: {
         300: "300px",
         440: "440px",
+        600: "600px",
       },
       letterSpacing: {
         tighter: "-.04em",

@@ -8,19 +8,22 @@ export default function UXMatters() {
         <div className="wrapper text-center">
           <h1 className="mb-4">User experience case studies</h1>
           <p className="opacity-70">
-            A collection of case studies highlighting the User Experience issues
-            and improvement of some popular products.
+            Highlighting the User Experience issues and improvement of some
+            popular products.
           </p>
         </div>
       </section>
-      <section className="pb-20">
+      <section className="pb-20 px-10">
         <div className="wrapper">
-          <iframe
-            width="800"
-            height="600"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN8pqiUfxXDbdTMW2U6EE68%2FUX-Case-Studies%3Fnode-id%3D1%253A3%26viewport%3D447%252C409%252C0.019763799384236336%26scaling%3Dmin-zoom"
-            allowfullscreen
-          ></iframe>
+          <div className="aspect-w-4 aspect-h-3 relative">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN8pqiUfxXDbdTMW2U6EE68%2FUX-Case-Studies%3Fnode-id%3D1%253A3%26viewport%3D447%252C409%252C0.019763799384236336%26scaling%3Dmin-zoom"
+              allowfullscreen
+              className=""
+            />
+          </div>
         </div>
       </section>
 
