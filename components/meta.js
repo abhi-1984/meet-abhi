@@ -34,7 +34,8 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content={`I’m a product designer with 5 years of experience with a keen
+                eye for creating engaging UI, bringing products to life.`}
       />
       <meta property="og:image" content={"/favicon/ogimage.png"} />
     </Head>
