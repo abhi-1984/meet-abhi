@@ -57,7 +57,7 @@ export default function About() {
           </p>
           <p className="pb-10 opacity-80">
             I spend my time building side-projects, learning new tools,
-            listening to music and podcasts, reading books and playing cricket.
+            listening to music, podcasts and playing cricket.
           </p>
           <p className="pb-10 opacity-80">Based in India.</p>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
