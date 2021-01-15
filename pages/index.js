@@ -72,7 +72,7 @@ export default function Index({}) {
     <>
       <Layout>
         <Head>
-          <title>Meet abhi</title>
+          <title>Meet Abhi</title>
         </Head>
         <AnimatePresence>
           {showGetInTouchPopover && (

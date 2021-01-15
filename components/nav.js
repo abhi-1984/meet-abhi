@@ -40,11 +40,11 @@ export default function Nav({ handleGetInTouchPopover }) {
               Work
             </a>
           </Link>
-          {/* <Link href="/ux-matters">
+          <Link href="/ux-matters">
             <a className="hidden sm:inline focus:outline-none hover:opacity-60 focus:ring focus:ring-opacity-50 focus:ring-accent">
               UX Case Studies
             </a>
-          </Link> */}
+          </Link>
           <Link href="/about">
             <a className="focus:outline-none focus:ring hover:opacity-60 focus:ring-opacity-50 focus:ring-accent">
               About

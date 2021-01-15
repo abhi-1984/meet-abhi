@@ -18,7 +18,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>Meet abhi - About</title>
+        <title>Meet Abhi - About</title>
       </Head>
       <section className="pt-20 pb-10 px-10">
         <div className="wrapper">
