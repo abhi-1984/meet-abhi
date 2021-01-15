@@ -154,7 +154,7 @@ export default function Index({}) {
         </section>
 
         <section className="pt-10 pb-20 px-10">
-          <div className="wrapper grid grid-flow-row auto-rows-auto gap-20">
+          <div className="wrapper grid grid-flow-row auto-rows-auto gap-24">
             {projects.map((project) => {
               return (
                 <div key={project.id}>
