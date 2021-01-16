@@ -5,7 +5,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: "sofia-pro, sans-serif",
+      sans:
+        "sofia-pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
     },
     extend: {
       colors: {
