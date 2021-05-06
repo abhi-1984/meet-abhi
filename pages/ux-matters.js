@@ -19,10 +19,9 @@ export default function UXMatters() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN8pqiUfxXDbdTMW2U6EE68%2FUX-Case-Studies%3Fnode-id%3D1%253A3%26viewport%3D447%252C409%252C0.019763799384236336%26scaling%3Dmin-zoom"
-              allowfullscreen
-              className=""
-            />
+              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FfXXGl7XChh8sqcn66esqWD%2FJio-Meet-Case-Study%3Fnode-id%3D0%253A4%26scaling%3Dmin-zoom%26page-id%3D0%253A1"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </section>
